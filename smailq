@@ -390,7 +390,7 @@ COMMANDS:
 OPTIONS:
 
   -C, --config=FILE
-          Use the given configuration file instead of "$HOME/.smailq.conf".
+          Use the given configuration file.
 
   -q, --quiet
           Do not print info messages.
