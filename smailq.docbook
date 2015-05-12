@@ -190,7 +190,8 @@
 
         <programlisting>
 [general]
-# Optional: The directory where the log file is written to
+# Optional: The directory where the log file is written to. The special
+# value 'syslog' causes smailq to log to syslog.
 logdir = ~/.smailq/log/
 # Optional: The directory where smailq saves the mail queue data
 datadir = ~/.smailq/data/
