@@ -181,9 +181,11 @@
         <title>CONFIGURATION FILES</title>
 
         <para>
-            By default, <command>smailq</command> reads $HOME/.smailq.conf as
-            configuration file. The syntax follows RFC 822. A sample
-            configuration file contains the following lines:
+            By default, <command>smailq</command> looks at $HOME/.smailq.conf
+            and /etc/smailq.conf (in that order) for a configuration file,
+            unless the configuration file is explicitly specified by an option.
+            The syntax follows RFC 822. A sample configuration file contains
+            the following lines:
 		</para>
 
         <programlisting>
