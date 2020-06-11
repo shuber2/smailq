@@ -1,0 +1,8 @@
+[Unit]
+Description=smailq delivery service
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/smailq --deliver-all

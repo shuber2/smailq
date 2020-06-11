@@ -1,0 +1,10 @@
+[Unit]
+Description=smailq delivery timer
+
+[Timer]
+OnBootSec=2m
+OnUnitActiveSec=15m
+Unit=smailq.service
+
+[Install]
+WantedBy=timers.target
