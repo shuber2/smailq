@@ -1,3 +1,4 @@
 smailq.1
 debian/smailq/
 debian/tmp/
+debian/.debhelper/

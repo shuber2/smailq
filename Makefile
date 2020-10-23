@@ -17,7 +17,6 @@ install: all
 	install -m 0755 sendmail $(SBINPATH)/sendmail
 	install -m 0644 smailq.conf $(CONFFILE)
 	install -m 0644 smailq.1 $(MANPATH)/smailq.1
-	bzip2 -f $(MANPATH)/smailq.1
 
 manpage: smailq.1
 
