@@ -1,0 +1,5 @@
+usr/share/smailq/smailq.conf.sample
+usr/share/man/man1/smailq.1.bz2
+usr/sbin/sendmail
+usr/bin/mailq
+usr/bin/smailq

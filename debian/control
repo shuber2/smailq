@@ -1,0 +1,16 @@
+Source: smailq
+Section: mail
+Priority: optional
+Maintainer: Raphaël Droz <raphael.droz@gmail.com>
+Build-Depends: python3, debhelper, docbook2x
+XS-Python-Version: current
+Standards-Version: 2.0.0-rc
+
+Package: smailq
+Replaces: mail-transport-agent
+Conflicts: mail-transport-agent
+Depends: python3
+Section: mail
+Architecture: all
+Description: A  mail queue for lightweight SMTP clients (MSAs) like msmtp.
+Homepage: https://www.sthu.org/code/smailq.html
