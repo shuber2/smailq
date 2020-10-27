@@ -13,7 +13,7 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	$(MAKE) install DESTDIR=$(CURDIR)/debian/smailq
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/smailq BIN_SUFFIX=.smailq
 
 binary-indep: install
 	dh_testdir

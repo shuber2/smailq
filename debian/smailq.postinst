@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -e
+
+if [ -e /usr/share/debconf/confmodule ]; then
+    . /usr/share/debconf/confmodule
+fi
+
+#DEBHELPER#
+
+case "$1" in
+    configure)
+	update-alternatives --install /usr/sbin/sendmail sendmail /usr/sbin/sendmail.smailq 5 \
+			    --slave /usr/lib/sendmail lib-sendmail /usr/sbin/sendmail.smailq;
+	update-alternatives --set sendmail /usr/sbin/sendmail.smailq || true
+	update-alternatives --set lib-sendmail /usr/sbin/sendmail.smailq || true
+	;;
+esac
