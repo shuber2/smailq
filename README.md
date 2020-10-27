@@ -1,7 +1,7 @@
 [repo]: https://git.sthu.org/?p=smailq.git;a=summary
 [website]: https://www.sthu.org/code/smailq.html
 
-#smailq
+# smailq
 
 ## Description
 
