@@ -362,6 +362,10 @@ USAGE:
   {0} --help
   {0} --version
 
+As sendmail:
+  sendmail -bp                   # Alias for smailq --list
+  sendmail [OPTIONS] [recipient] # Alias for smailq --send --
+
 COMMANDS:
 
       --delete
@@ -401,6 +405,13 @@ OPTIONS:
 
 
 if __name__ == "__main__":
+    if os.path.basename(sys.argv[0]) == 'sendmail':
+        if '-bp' in sys.argv:
+            argv = ['--list']
+        else:
+            argv = ['--send', '--'] + sys.argv[1:]
+    else:
+        argv = sys.argv[1:]
 
     conffn_list = [os.path.expanduser("~/.smailq.conf"), "/etc/smailq.conf"]
     cmd = "--list"
@@ -410,7 +421,7 @@ if __name__ == "__main__":
 
         longopts = ["config=", "delete", "deliver-all", "deliver", "help",
                     "list", "send", "verbose", "version", "quiet"]
-        opts, nooptargs = getopt.gnu_getopt(sys.argv[1:], "hC:vVq", longopts)
+        opts, nooptargs = getopt.gnu_getopt(argv, "hC:vVq", longopts)
 
         for opt, arg in opts:
             if opt in ['-h', '--help']:

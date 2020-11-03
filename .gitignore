@@ -2,3 +2,7 @@ smailq.1
 debian/smailq/
 debian/tmp/
 debian/.debhelper/
+*.build/
+*.dist/
+*.pyi
+*.so
