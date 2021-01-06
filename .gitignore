@@ -3,3 +3,5 @@ debian/smailq/
 debian/tmp/
 debian/.debhelper/
 sendmail
+*.swp
+smailq.ps
