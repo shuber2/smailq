@@ -1,5 +1,6 @@
 PREFIX ?= /usr
 BIN_SUFFIX ?=
+CFLAGS = -std=c99 -pedantic -Wall -Wextra
 
 # Where the script binary should go
 BINPATH = $(DESTDIR)$(PREFIX)/bin
@@ -9,7 +10,7 @@ SHAREDIR = $(DESTDIR)$(PREFIX)/share/smailq
 CONFFILE = $(SHAREDIR)/smailq.conf.sample
 ######################################################################
 
-all: manpage
+all: sendmail manpage
 
 install: all
 	mkdir -p $(BINPATH) $(SBINPATH) $(MANPATH) $(SHAREDIR)
